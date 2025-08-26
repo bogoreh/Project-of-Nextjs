@@ -1,0 +1,36 @@
+.navigation {
+  width: 250px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-right: 20px;
+  height: fit-content;
+}
+
+.navigation ul {
+  list-style: none;
+}
+
+.navigation li {
+  margin-bottom: 15px;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.navLink:hover {
+  background-color: #f0f2f5;
+}
+
+.icon {
+  font-size: 20px;
+}
