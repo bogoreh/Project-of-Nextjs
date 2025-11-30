@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Welcome to Our Blog",
+      "slug": "welcome-to-our-blog",
+      "content": "This is the first post on our new blog. We're excited to share our thoughts and experiences with you.",
+      "excerpt": "Welcome to our new blog platform built with Next.js and TypeScript.",
+      "author": "Admin",
+      "publishedAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "isPublished": true
+    },
+    {
+      "id": "2",
+      "title": "Getting Started with Next.js",
+      "slug": "getting-started-with-nextjs",
+      "content": "Next.js is a React framework that enables server-side rendering and static site generation.",
+      "excerpt": "Learn how to get started with Next.js and build amazing web applications.",
+      "author": "Admin",
+      "publishedAt": "2024-01-02T00:00:00.000Z",
+      "updatedAt": "2024-01-02T00:00:00.000Z",
+      "isPublished": true
+    }
+  ]
+}
