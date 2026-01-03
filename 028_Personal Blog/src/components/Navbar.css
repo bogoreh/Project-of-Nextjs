@@ -1,0 +1,114 @@
+/* components/Navbar.css */
+.mobile-menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-button {
+    display: none;
+  }
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.menu-line {
+  display: block;
+  height: 2px;
+  width: 24px;
+  background-color: var(--text-color);
+  transition: var(--transition);
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 100;
+}
+
+.mobile-nav-container {
+  padding: 1rem 1.5rem;
+}
+
+.mobile-nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-nav-link {
+  color: var(--text-light);
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: var(--transition);
+  display: block;
+}
+
+.mobile-nav-link:hover {
+  color: var(--primary-color);
+}
+
+.desktop-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+.nav-link {
+  color: var(--text-light);
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.rotate-45 {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.-rotate-45 {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+.opacity-0 {
+  opacity: 0;
+}
