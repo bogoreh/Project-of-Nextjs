@@ -1,0 +1,272 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-in;
+}
+
+.timerContainer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.timerBox {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  min-width: 120px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  animation: slideUp 0.5s ease-out;
+}
+
+.timerValue {
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.timerLabel {
+  display: block;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  min-width: 140px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btnPause {
+  background: #fbbf24;
+  color: #1e293b;
+}
+
+.btnReset {
+  background: #ef4444;
+  color: white;
+}
+
+.btnCustom {
+  background: #3b82f6;
+  color: white;
+}
+
+.btnApply {
+  background: #10b981;
+  color: white;
+  margin-left: 1rem;
+}
+
+.customDateContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+.dateInput {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  background: white;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.dateInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.message {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .timerBox {
+    min-width: calc(50% - 1rem);
+    padding: 1rem;
+  }
+
+  .timerValue {
+    font-size: 2rem;
+  }
+
+  .timerLabel {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    min-width: 120px;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .timerBox {
+    min-width: calc(50% - 0.5rem);
+    padding: 0.8rem;
+  }
+
+  .timerValue {
+    font-size: 1.5rem;
+  }
+
+  .timerLabel {
+    font-size: 0.8rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .customDateContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .dateInput {
+    width: 100%;
+  }
+
+  .btnApply {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .message {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Landscape Mode */
+@media (max-height: 500px) and (orientation: landscape) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  .timerContainer {
+    gap: 0.5rem;
+  }
+
+  .timerBox {
+    min-width: 80px;
+    padding: 0.5rem;
+  }
+
+  .timerValue {
+    font-size: 1.5rem;
+  }
+
+  .controls {
+    margin: 1rem 0;
+  }
+}
