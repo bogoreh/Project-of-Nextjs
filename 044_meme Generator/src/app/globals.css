@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar for webkit browsers */
+  .overflow-y-auto::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  .overflow-y-auto::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded-full;
+  }
+
+  .overflow-y-auto::-webkit-scrollbar-thumb {
+    @apply bg-purple-400 rounded-full hover:bg-purple-500;
+  }
+
+  /* Mobile-friendly tap targets */
+  button, 
+  input[type="range"],
+  input[type="color"] {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Prevent text selection on buttons */
+  button {
+    @apply select-none;
+  }
+}
