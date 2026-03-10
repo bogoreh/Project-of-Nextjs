@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+
+  * {
+    @apply border-gray-200;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer utilities {
+  .prose {
+    @apply max-w-none;
+  }
+  
+  .prose pre {
+    @apply bg-gray-900 text-white p-4 rounded-lg overflow-auto;
+  }
+  
+  .prose code {
+    @apply bg-gray-100 text-gray-900 px-1 py-0.5 rounded text-sm;
+  }
+  
+  .prose blockquote {
+    @apply border-l-4 border-gray-300 pl-4 italic;
+  }
+  
+  .prose img {
+    @apply rounded-lg shadow-md;
+  }
+  
+  .prose table {
+    @apply border-collapse border border-gray-300;
+  }
+  
+  .prose th,
+  .prose td {
+    @apply border border-gray-300 px-4 py-2;
+  }
+  
+  .prose th {
+    @apply bg-gray-100;
+  }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 640px) {
+  .container {
+    @apply px-2;
+  }
+  
+  h1 {
+    @apply text-2xl;
+  }
+  
+  .grid {
+    @apply gap-2;
+  }
+  
+  .prose {
+    @apply text-sm;
+  }
+  
+  /* Improve touch targets on mobile */
+  button {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  input,
+  textarea {
+    @apply text-base; /* Prevents zoom on focus in iOS */
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
